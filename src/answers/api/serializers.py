@@ -6,5 +6,5 @@ class AnswerSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Answer
-        fields = '__all__'
+        fields = ['id', 'text', 'timestamp', 'updated']
 

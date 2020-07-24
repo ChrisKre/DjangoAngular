@@ -8,4 +8,4 @@ class QuestionListSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = QuestionList
-        fields = ['name', 'owner', 'questions', 'type', 'timestamp', 'updated']
+        fields = ['id', 'name', 'owner', 'questions', 'type', 'timestamp', 'updated']
