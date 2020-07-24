@@ -1,6 +1,3 @@
-from django.shortcuts import render
-from django.views.generic import TemplateView
-
 from answers.api.serializers import AnswerSerializer
 from answers.models import Answer
 from rest_framework import viewsets
