@@ -22,6 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path(r'api/', include_docs_urls(title='API Overview')),
     path(r'api/answers/', include('answers.api.urls')),
-    path(r'api/questions/', include('questions.api.urls'))
-
+    path(r'api/questions/', include('questions.api.urls')),
+    path(r'api/questionlist', include('questionlist.api.urls'))
 ]

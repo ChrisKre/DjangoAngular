@@ -6,7 +6,11 @@ from answers.models import Answer
 
 
 class Question(models.Model):
-    owner = models.ForeignKey(User, related_name='questionOwner', on_delete=models.CASCADE)
+    owner = models.ForeignKey(
+        User,
+        related_name='questionOwner',
+        on_delete=models.CASCADE
+    )
     answers = models.ManyToManyField(Answer)
     text = models.TextField()
     timestamp = models.DateField(auto_now_add=True)
