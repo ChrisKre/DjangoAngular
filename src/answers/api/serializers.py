@@ -7,4 +7,5 @@ class AnswerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Answer
         fields = ['id', 'text', 'timestamp', 'updated']
+        extra_kwargs = {'questions': {'required': True}}
 

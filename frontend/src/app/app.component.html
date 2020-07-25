@@ -1,9 +1,28 @@
+<td-layout-nav sidenavTitle="title" logo="logo" icon="icon" color="primary">
+  <div td-toolbar-content>
+    .. main toolbar content
+  </div>
+  <td-layout-manage-list opened="true" mode="side" sidenavWidth="257px">
+    <mat-toolbar td-sidenav-content>
+      ... toolbar in sidenav
+    </mat-toolbar>
+    <mat-nav-list td-sidenav-content>
+      ... sidenav content
+    </mat-nav-list>
+    <mat-toolbar>
+      <button mat-icon-button tdLayoutManageListOpen [hideWhenOpened]="true">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+      ... sub toolbar content
+    </mat-toolbar>
+    ... main content
+    <td-layout-footer-inner>
+      ... sub footer content
+    </td-layout-footer-inner>
+  </td-layout-manage-list>
+  <td-layout-footer color="primary"> // color is optional
+    ... main footer content
+  </td-layout-footer>
+</td-layout-nav>
 
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-</div>
-<div style='width: 800px; margin: 0 auto'>
-    <router-outlet></router-outlet>
-</div>
+<router-outlet></router-outlet>

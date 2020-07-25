@@ -25,5 +25,6 @@ urlpatterns = [
     path(r'api/', include_docs_urls(title='API Overview')),
     path(r'api/answers/', include('answers.api.urls'), name='api-answers'),
     path(r'api/questions/', include('questions.api.urls'), name='api-questions'),
-    path(r'api/questionlist', include('questionlist.api.urls'), name='api-questionlist')
+    path(r'api/registers/', include('registers.api.urls'), name='api-registers'),
+    #path(r'api/questionlist/', include('questionlist.api.urls'), name='api-questionlist')
 ]

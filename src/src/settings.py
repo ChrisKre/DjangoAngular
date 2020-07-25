@@ -43,8 +43,7 @@ INSTALLED_APPS = [
     # local
     'answers',
     'questions',
-    'questionlist',
-
+    'registers',
 ]
 
 MIDDLEWARE = [
