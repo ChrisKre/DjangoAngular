@@ -1,9 +1,9 @@
 from django.urls import path, include
 from rest_framework import routers
-from .views import QuestionViewSet
+from .views import RegisterViewSet
 
 router = routers.DefaultRouter()
-router.register(r'', QuestionViewSet)
+router.register(r'', RegisterViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),

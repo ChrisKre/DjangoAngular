@@ -1,0 +1,7 @@
+<app-add-answer (addAnswer)="addAnswer($event)"></app-add-answer>
+<app-answer-item
+  *ngFor='let answer of answers'
+  [answer]="answer"
+  (deleteAnswer)="deleteAnswer($event)"
+>
+</app-answer-item>

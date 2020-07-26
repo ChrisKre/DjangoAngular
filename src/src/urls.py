@@ -16,12 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from rest_framework.documentation import include_docs_urls
-from django.conf.urls import include
+from django.conf.urls import include, url
+from django.views.generic import TemplateView
 
 urlpatterns = [
+    url(r'^$', TemplateView.as_view(template_name='index.html'), name='home'),
     path('admin/', admin.site.urls),
     path(r'api/', include_docs_urls(title='API Overview')),
-    path(r'api/answers/', include('answers.api.urls')),
-    path(r'api/questions/', include('questions.api.urls')),
-    path(r'api/questionlist', include('questionlist.api.urls'))
+    path(r'api/answers/', include('answers.api.urls'), name='api-answers'),
+    path(r'api/questions/', include('questions.api.urls'), name='api-questions'),
+    path(r'api/registers/', include('registers.api.urls'), name='api-registers'),
+    #path(r'api/questionlist/', include('questionlist.api.urls'), name='api-questionlist')
 ]
