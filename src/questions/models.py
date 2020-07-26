@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User
 from django.db import models
-from answers.models import Answer
+from registers.models import Register
 # Create your models here.
 
 
@@ -10,7 +10,13 @@ class Question(models.Model):
         related_name='questionOwner',
         on_delete=models.CASCADE
     )
-    answers = models.ManyToManyField(Answer, related_name='questions')
+
+    register = models.ForeignKey(
+        Register,
+        related_name='questions',
+        on_delete=models.CASCADE
+    )
+
     text = models.TextField()
     timestamp = models.DateField(auto_now_add=True)
     updated = models.DateField(auto_now=True)

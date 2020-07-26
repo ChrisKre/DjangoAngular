@@ -1,7 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils.translation import gettext_lazy as _
-from questions.models import Question
 # Create your models here.
 
 
@@ -17,7 +16,7 @@ class Register(models.Model):
         related_name='questionRegisterOwners',
         on_delete=models.CASCADE
     )
-    questions = models.ManyToManyField(Question, related_name='registers')
+
     name = models.CharField(max_length=50)
     timestamp = models.DateField(auto_now_add=True)
     updated = models.DateField(auto_now=True)
