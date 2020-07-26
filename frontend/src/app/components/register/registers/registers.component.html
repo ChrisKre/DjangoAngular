@@ -1,0 +1,7 @@
+<app-add-register (AddRegister)="addRegister($event)"></app-add-register>
+<app-register-item
+  *ngFor='let register of registers'
+  [register]="register"
+  (deleteRegister)="deleteRegister($event)"
+>
+</app-register-item>

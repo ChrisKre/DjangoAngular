@@ -8,5 +8,5 @@ class RegisterSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Register
-        fields = ['owner', 'name', 'questions', 'type']
+        fields = ['id', 'owner', 'name', 'questions', 'type']
 

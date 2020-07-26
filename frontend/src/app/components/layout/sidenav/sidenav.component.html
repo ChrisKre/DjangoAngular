@@ -1,0 +1,14 @@
+<td-layout  class='layout' [mode]="'side'" [opened]="true" [sidenavWidth]="'257px'">
+ <div td-sidenav-content>
+   <ul>
+     <a [routerLink]="['/register']">
+      register |
+</a>
+   <a [routerLink]="['/answer']">
+      answer
+</a>
+   </ul>
+
+ </div>
+ <router-outlet></router-outlet>
+</td-layout>

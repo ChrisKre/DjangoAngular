@@ -21,13 +21,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatListModule} from "@angular/material/list";
 import {MatIconModule} from "@angular/material/icon";
+import { RegistersComponent } from './components/register/registers/registers.component';
+import { RegisterItemComponent } from './components/register/register-item/register-item.component';
+import { AddRegisterComponent } from './components/register/add-register/add-register.component';
+import { SidenavComponent } from './components/layout/sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AnswersComponent,
     AnswerItemComponent,
-    AddAnswerComponent
+    AddAnswerComponent,
+    RegistersComponent,
+    RegisterItemComponent,
+    AddRegisterComponent,
+    SidenavComponent,
   ],
   imports: [
     BrowserModule,
